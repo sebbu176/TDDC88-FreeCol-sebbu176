@@ -304,7 +304,7 @@ public class SoundPlayer {
 
             SourceDataLine line = openLine(in.getFormat());
             if (line == null) return false;
-            try {
+            try { // Just play the beginning
                 startPlaying();
                 int rd;
                 while (keepPlaying() && (rd = in.read(data)) > 0) {
